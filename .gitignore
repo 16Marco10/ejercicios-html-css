@@ -1,0 +1,5 @@
+# Ignora los archivos temporales de Windows
+Thumnbs.db
+
+# Configuración local de VS Code
+.vscode/
