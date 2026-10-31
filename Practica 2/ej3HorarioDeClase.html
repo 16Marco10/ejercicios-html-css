@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario de clase</title>
+    <style>
+        table {
+            width: 100;
+            border-collapse: collapse;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: lightgray;
+        }
+        
+        .aweb {
+            background-color: cyan;
+        }
+        .segi {
+            background-color: red; color: white;
+        }
+        .ing {
+            background-color: navy; color: white;
+        }
+        .sor {
+            background-color: limegreen;
+        }
+        .opt {
+            background-color: darkviolet; color: white;
+        }
+        .proy  {
+            background-color: yellow;
+        }
+        .ipe2 {
+            background-color: brown; color: white;
+        }
+        .sred {
+            background-color: green; color: white;
+        }
+        .recreo {
+            background-color: lightgray; font-weight: bold;
+        }
+    </style>
+    <head>
+        <body>
+            <h1>Horario 2ºSMR Tarde</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>HORA</th>
+                        <th>LUNES</th>
+                        <th>MARTES</th>
+                        <th>MIÉRCOLES</th>
+                        <th>JUEVES</th>
+                        <th>VIERNES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>15:15-16:15</th>
+                        <td class="aweb" rowspan="2">AWEB</td>
+                        <td class="segi" rowspan="2">SEGI</td>
+                        <td class="ing" rowspan="2">ING</td>
+                        <td class="sor" rowspan="3">SOR</td>
+                        <td class="opt" rowspan="3">OPT</td>
+                    </tr>
+                    <tr>
+                        <th>16:15-17:15</th>
+                    </tr>
+                    <tr>
+                        <th>17:15-18:15</th>
+                        <td class="proy">PROY</td>
+                        <td class="ipe2">IPE2</td>
+                        <td class="ipe2">IPE2</td>
+                    </tr>
+                    <tr>
+                        <th>18:15-18:30</th>
+                        <td class="recreo" colspan="5">RECREO</td>
+                    </tr>
+                    <tr>
+                        <th>18:30-19:30</th>
+                        <td class="sor" rowspan="3">SOR</td>
+                        <td class="ipe2">IPE2</td>
+                        <td class="proy">PROY</td>
+                        <td class="sred">SRED</td>
+                        <td class="sred" rowspan="3">SRED</td>
+                    </tr>
+                    <tr>
+                        <th>19:30-20:30</th>
+                        <td class="sred" rowspan="2">SRED</td>
+                        <td class="aweb" rowspan="2">AWEB</td>
+                        <td class="segi" rowspan="2">SEGI</td>
+                    </tr>
+                    <tr>
+                        <th>20:30-21:30</th>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="clear: both; display: block;"text-align: center; margin-top: 30px; width: 100%;">
+                <h2>Marco Martín Luengo</h2>
+                <img src="https://i.pinimg.com/originals/9c/15/16/9c15164f48b527ea72d6d1b418f910e0.gif" alt="GIF" width="250">
+            </div>
+        </body>
+    </head>

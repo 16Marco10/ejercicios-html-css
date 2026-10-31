@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de productos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: gainsboro;
+        }
+
+        .agotado {
+            background-color: red;
+        }
+    </style>
+
+    <head>
+
+    <body>
+        <h1>Productos disponibles</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Disponibilidad</th>
+                    <th>Enlace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P001</td>
+                    <td>Teclado</td>
+                    <td>25.00€</td>
+                    <td>15</td>
+                    <td>Disponible</td>
+                    <td><a href="">Ver producto</a></td>
+                </tr>
+                <tr>
+                    <td>P002</td>
+                    <td>Ratón</td>
+                    <td>12.00€</td>
+                    <td>30</td>
+                    <td>Disponible</td>
+                    <td><a href="">Ver producto</a></td>
+                </tr>
+                <tr>
+                    <td>P003</td>
+                    <td>Monitor</td>
+                    <td>180.00€</td>
+                    <td>0</td>
+                    <td class="agotado">Agotado</td>
+                    <td><a href="">Ver producto</a></td>
+                </tr>
+                <tr>
+                    <td>P004</td>
+                    <td>Auriculares</td>
+                    <td>35.00€</td>
+                    <td>8</td>
+                    <td>Disponible</td>
+                    <td><a href="">Ver producto</a></td>
+                </tr>
+                <tr>
+                    <td>P005</td>
+                    <td>Webcam</td>
+                    <td>45.00€</td>
+                    <td>3</td>
+                    <td>Disponible</td>
+                    <td><a href="">Ver producto</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Buscar productos</h2>
+        <form action="">
+            <div>
+                <label for="nombre">Nombre del producto</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Teclado">
+            </div>
+            <div>
+                <label for="precio">Precio máximo (€):</label>
+                <input type="number" id="precio" name="precio" min="0" step="0.01" placeholder="Ej. 50">
+            </div>
+            <div>
+                <label for="disponibilidad">Disponibilidad:</label>
+                <select id="disponibilidad" name="disponibilidad">
+                    <option value="todos">Todos</option>
+                    <option value="disponible">Disponible</option>
+                    <option value="agotado">Agotado</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">Buscar</button>
+            </div>
+        </form>
+    </body>
+</head>

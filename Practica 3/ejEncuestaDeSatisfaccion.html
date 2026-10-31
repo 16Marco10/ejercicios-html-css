@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de satisfacción</title>
+    <style>
+        label {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        table {
+            width: 100%;
+            max-width: 550px;
+            margin: auto;
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 4px;
+            text-align: center;
+        }
+
+        th {
+            background-color: gainsboro;
+        }
+
+        .cinco {
+            background-color: green;
+        }
+
+        .cuatro {
+            background-color: lawngreen
+        }
+
+        .tres {
+            background-color: rgb(245, 180, 0);
+        }
+
+        .dos {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/action_page.php" style="max-width: 550px; margin: auto">
+        <fieldset style="background-color: rgb(216, 216, 211);text-align: center;">
+            <legend style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ENCUESTA</legend>
+            <br>
+            <label for="nombre">Introduce tu nombre</label><br>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="servicio">Introduce tu servicio utilizado</label><br>
+            <input type="text" id="servicio" name="servicio" required><br>
+            <hr>
+            <label for="valoracion">Elije una valoración general</label><br>
+            <input type="number" id="valoracion" name="valoracion" min="1" max="5" required><br>
+            <hr>
+            <label for="aspectos">Aspectos que más le han gustado:</label><br>
+            <div style="display: inline-block; text-align: right;">
+                <label for="atencion">Atención</label>
+                <input type="checkbox" name="aspectos" id="atencion" value="atencion"><br>
+                <label for="rapidez">Rapidez</label>
+                <input type="checkbox" name="aspectos" id="rapidez" value="rapidez"><br>
+                <label for="precio">Precio</label>
+                <input type="checkbox" name="aspectos" id="precio" value="precio"><br>
+                <label for="calidad">Calidad</label>
+                <input type="checkbox" name="aspectos" id="calidad" value="calidad"><br>
+            </div>
+            <hr>
+            <label for="recomendacion">¿Recomendaría el servicio?</label><br>
+            <label for="si">Sí</label>
+            <input type="radio" name="recomendacion" id="si" value="si">
+            <label for="no">No</label>
+            <input type="radio" name="recomendacion" id="no" value="no"><br>
+            <hr>
+            <label for="comentarios">Comentarios adicionales</label><br>
+            <textarea id="comentarios" name="comentarios" rows="3" cols="30"></textarea><br><br>
+            <input type="submit" value="Entregar"><br>
+        </fieldset>
+    </form>
+    <h1 style="text-align: center;">RESULTADOS</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Valoración</th>
+                <th>Recomienda</th>
+                <th>Comentarios</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana</td>
+                <td>Reparación</td>
+                <td class="cinco">5</td>
+                <td>Sí</td>
+                <td>Muy buen servicio</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>Instalación</td>
+                <td class="cuatro">4</td>
+                <td>Sí</td>
+                <td>Rápido y eficaz</td>
+            </tr>
+            <tr>
+                <td>Lucía</td>
+                <td>Reparación</td>
+                <td class="tres">3</td>
+                <td>No</td>
+                <td>Tardaron demasiado</td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td>Mantenimiento</td>
+                <td class="cinco">5</td>
+                <td>Sí</td>
+                <td>Excelente atención</td>
+            </tr>
+            <tr>
+                <td>Elena</td>
+                <td>Instalación</td>
+                <td class="dos">2</td>
+                <td>No</td>
+                <td>Precio elevado</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 style="text-align: center;">RESUMEN</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Puntuación</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nº de Clientes</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

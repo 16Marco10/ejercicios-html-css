@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de reserva de una biblioteca</title>
+    <style>
+        label {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        table {
+            width: 100%;
+            max-width: 550px;
+            margin: auto;
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 4px;
+            text-align: center;
+        }
+
+        th {
+            background-color: gainsboro;
+        }
+
+        .confirmada {
+            background-color: rgb(246, 250, 3);
+        }
+
+        .entregada {
+            background-color: lawngreen;
+        }
+
+        .pendiente {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/action_page.php" style="max-width: 550px; margin: auto">
+        <fieldset style="background-color: rgb(216, 216, 211);text-align: center;">
+            <legend style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">FORMULARIO DE
+                RESERVA
+            </legend><br>
+            <label for="nombre">Introduce tu nombre de usuario</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="numero">Introduce tu número de socio</label><br>
+            <input type="text" id="numero" name="numero" required><br><br>
+            <label for="correo">Introduce tu correo electrónico:</label><br>
+            <input type="email" id="correo" name="correo" required><br><br>
+            <label for="libro">Introduce el título del libro</label><br>
+            <input type="text" id="libro" name="libro" required><br><br>
+            <label for="autor">Introduce el autor</label><br>
+            <input type="text" id="autor" name="autor" required><br><br>
+            <hr>
+            <label for="fecha">Fecha de reserva:</label><br>
+            <input type="date" id="fecha" name="fecha" required><br><br>
+            <label for="recogida">Fecha prevista de recogida:</label><br>
+            <input type="date" id="recogida" name="recogida" required><br><br>
+            <hr>
+            <label for="prestamo">Tipo de préstamo:</label><br>
+            <div style="display: inline-block; text-align: left;">
+                <input type="radio" name="prestamo" id="prestamo" value="sala" required>
+                <label for="sala">Sala</label><br>
+                <input type="radio" name="prestamo" id="domicilio" value="domicilio" required>
+                <label for="domicilio">Domicilio</label>
+            </div>
+            <hr>
+            <label for="comentarios">Comentarios adicionales</label><br>
+            <textarea id="comentarios" name="comentarios" rows="3" cols="30"></textarea><br><br>
+            <input type="submit" value="Entregar" style="margin-right: 10px;">
+            <input type="reset" value="Resetear"><br>
+        </fieldset>
+        <div
+            style="max-width: 550px; margin: 20px auto; text-align: center; font-family: 'Courier New', Courier, monospace;">
+            <label for="buscar">Buscar por número de socio:</label><br>
+            <input type="text" id="buscar" name="buscar" placeholder="Ej: 12345"
+                style="margin-top: 5px; padding: 4px;">
+            <input type="submit" value="Buscar" style="margin-left: 5px; padding: 4px;">
+        </div>
+    </form>
+    <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center;">Reservas Registradas
+    </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nº Reserva</th>
+                <th>Usuario</th>
+                <th>Libro</th>
+                <th>Fecha de reserva</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ana López</td>
+                <td>El principito</td>
+                <td>14/10/2026</td>
+                <td class="pendiente">Pendiente</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pablo Ruiz</td>
+                <td>La sombra del viento</td>
+                <td>13/10/2026</td>
+                <td class="confirmada">Confirmada</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Marta Díaz</td>
+                <td>Don Quijote</td>
+                <td>12/10/2026</td>
+                <td class="entregada">Entregada</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Luis Martín</td>
+                <td>Cien años de soledad</td>
+                <td>11/10/2026</td>
+                <td class="pendiente">Pendiente</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+
+
+</html>

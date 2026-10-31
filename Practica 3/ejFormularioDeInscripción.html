@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de incripción</title>
+    <style>
+        label {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+   
+
+<body>
+    <form action="/action_page.php" style="max-width: 550px; margin: auto">
+        <fieldset style="background-color: rgb(216, 216, 211);text-align: center;">
+            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">FORMULARIO DE
+                INSCRIPCIÓN</h1>
+            <label for="nombre">Introduce tu nombre:</label><br>
+            <input type="text" id="nombre" name="mombre" required><br>
+            <label for="apellidos">Introduce tus apellidos:</label><br>
+            <input type="text" id="apellidos" name="apellidos" required><br><br>
+            <label for="dni">Introduce tu DNI:</label><br>
+            <input type="text" id="dni" name="dni" required><br><br>
+            <label for="fecha">Introduce tu fecha de nacimiento:</label><br>
+            <input type="date" id="fecha" name="fecha" required><br><br>
+            <label for="correo">Introduce tu correo electrónico:</label><br>
+            <input type="email" id="correo" name="correo" required><br><br>
+            <label for="teléfono">Introduce tu teléfono</label><br>
+            <input type="tel" id="teléfono" name="teléfono" required><br><br>
+            <label for="ciclo">Introduce tu ciclo formativo:</label><br>
+            <input type="text" name="ciclo" id="ciclo" required><br>
+            <hr>
+            <label for="turno">Introduce tu turno preferido:</label><br>
+            <div style="display: inline-block; text-align: left;">
+                <input type="radio" name="turno" id="mañana" value="Mañana" required>
+                <label for="mañana">Mañana</label><br>
+                <input type="radio" name="turno" id="tarde" value="Tarde" required>
+                <label for="tarde"> Tarde</label><br>
+            </div>
+            <hr>
+            <label for="modalidad">Introduce tu modalidad</label><br>
+            <select name="modalidad" id="modalidad" required>
+                <option value="presencial">Presencial</option>
+                <option value="semipresencial">Semipresencial</option>
+                <option value="online">Online</option>
+            </select><br>
+            <hr>
+            <label for="política">Política de privacidad</label><br>
+            <input type="checkbox" name="politica" id="politica" required>
+            <label for="politica">Aceptar</label><br><br>
+            <input type="submit" value="Entregar">
+        </fieldset>
+    </form>
+</body>
+
+
+    <html>
+
+    </html>
